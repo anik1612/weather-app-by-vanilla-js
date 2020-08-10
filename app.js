@@ -9,6 +9,8 @@ async function getCity(){
 }
 
 getCity().then(data => {
+    const country = document.getElementById('w-country');
+    country.TextContent = data.country;
     const weather = new Weather(data.city);
     weather.getWeather().then(data => {
         ui.displayWeatherInfo(data); 
