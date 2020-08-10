@@ -21,28 +21,30 @@
     <div class="row weather-container mx-0">
         <div class="weather-report-card col-md-5 col-10 mx-auto mt-5">
             <div class="weather-report-header text-center">
-                <h3 class="text-white">City</h3>
-
+                <h3 id="w-location"  class="text-white">City</h3>
+                <h3 id="w-desc" class="text-white">Weather Description</h3>
+                <h3 id="w-temp" class="text-white">0 C</h3>
+                <img id="w-icon" src="">
             </div>
-            <ul class="list-group mt-3">
-                <li class="list-group-item mb-2 bg-custom p-md-4 p-3"></li>
-                <li class="list-group-item mb-2 bg-custom p-md-4 p-3"></li>
-                <li class="list-group-item mb-2 bg-custom p-md-4 p-3"></li>
+            <ul class="list-group mt-1 text-center text-white">
+                <li class="list-group-item mb-2 bg-custom" id="w-humidity">Humidity</li>
+                <li class="list-group-item mb-2 bg-custom" id="w-pressure">Pressure</li>
+                <li class="list-group-item mb-2 bg-custom" id="w-wind">Wind Speed</li>
+
             </ul>
 
             <div class="text-center">
-                <button type="button" class="btn btn-primary mt-4 bg-custom" data-toggle="modal" data-target="#exampleModal"
-                data-whatever="@mdo">Change Location</button>
+                <button type="button" class="btn btn-primary mt-3 bg-custom" data-toggle="modal" data-target="#localModal">Change Location</button>
             </div>
         </div>
     </div>
 
     <!-- modal for changing location -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="localModal" tabindex="-1" aria-labelledby="localModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Change Location</h5>
+                    <h5 class="modal-title" id="localModalLabel">Change Location</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -51,7 +53,7 @@
                     <form>
                         <div class="form-group">
                             <label for="recipient-name" class="col-form-label">City</label>
-                            <input type="text" class="form-control" id="recipient-name">
+                            <input type="text" class="form-control" id="city">
                         </div>
                     </form>
                 </div>
