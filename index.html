@@ -1,21 +1,83 @@
-u<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap cdn -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!-- custom style sheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/weather.ico" type="image/x-icon">
+    <!-- google patrick hand font -->
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <!-- website title -->
     <title>weather app - Anik Sarker</title>
 </head>
+
 <body>
-    
+    <div class="row weather-container mx-0">
+        <div class="weather-report-card col-md-5 col-10 mx-auto mt-5">
+            <div class="weather-report-header text-center">
+                <h3 class="text-white">City</h3>
+
+            </div>
+            <ul class="list-group mt-3">
+                <li class="list-group-item mb-2 bg-custom p-md-4 p-3"></li>
+                <li class="list-group-item mb-2 bg-custom p-md-4 p-3"></li>
+                <li class="list-group-item mb-2 bg-custom p-md-4 p-3"></li>
+            </ul>
+
+            <div class="text-center">
+                <button type="button" class="btn btn-primary mt-4 bg-custom" data-toggle="modal" data-target="#exampleModal"
+                data-whatever="@mdo">Change Location</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for changing location -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Change Location</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">City</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="w-change-btn" class="btn btn-primary bg-custom" data-dismiss="modal">Change</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- external javascript tag -->
     <script src="weather.js"></script>
     <script src="ui.js"></script>
     <script src="app.js"></script>
+
+    <!-- bootstrap additional javascript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
