@@ -7,12 +7,10 @@ class UI{
         this.humidity = document.getElementById('w-humidity');
         this.pressure = document.getElementById('w-pressure');
         this.wind = document.getElementById('w-wind');
-        this.country = document.getElementById('w-country');
         }
 
     displayWeatherInfo(weather){
         this.city.textContent = weather.name;
-        this.country.textContent = weather.country;
         this.desc.textContent = weather.weather[0].description;
         this.temp.textContent = Math.floor(weather.main.temp - 273.15) + 'ºC';
         this.icon.src = `https://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
