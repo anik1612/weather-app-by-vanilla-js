@@ -13,7 +13,7 @@ class UI{
         this.city.textContent = weather.name;
         this.desc.textContent = weather.weather[0].description;
         this.temp.textContent = Math.floor(weather.main.temp - 273.15) + 'ºC';
-        this.icon.src = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
+        this.icon.src = `https://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
         this.humidity.textContent = 'humidity: ' + weather.main.humidity + " %";
         this.pressure.textContent = 'Air Pressure: ' + weather.main.pressure + " º";
         this.wind.textContent = weather.wind.speed + " km/h";
