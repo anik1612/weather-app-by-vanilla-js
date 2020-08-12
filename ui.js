@@ -7,7 +7,7 @@ class UI{
         this.humidity = document.getElementById('w-humidity');
         this.pressure = document.getElementById('w-pressure');
         this.wind = document.getElementById('w-wind');
-    }
+        }
 
     displayWeatherInfo(weather){
         this.city.textContent = weather.name;
