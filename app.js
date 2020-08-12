@@ -17,7 +17,6 @@ getCity().then(data => {
 
 document.getElementById('w-change-btn').addEventListener('click', () => {
     const city = document.getElementById('city').value;
-    console.log(city);
     const weather = new Weather(city);
     weather.getWeather().then(data => {
         ui.displayWeatherInfo(data); 
