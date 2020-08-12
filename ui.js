@@ -16,6 +16,6 @@ class UI{
         this.icon.src = `https://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
         this.humidity.textContent = 'humidity: ' + weather.main.humidity + " %";
         this.pressure.textContent = 'Air Pressure: ' + weather.main.pressure + " º";
-        this.wind.textContent = weather.wind.speed + " km/h";
+        this.wind.textContent = 'Wind Speed: ' + weather.wind.speed + " km/h";
     }
 }
